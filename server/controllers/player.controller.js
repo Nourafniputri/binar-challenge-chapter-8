@@ -88,6 +88,7 @@ class PlayerController {
       }
     } catch (error) {
       next(error);
+      console.log(error);
     }
   }
 

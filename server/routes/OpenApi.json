@@ -1,0 +1,404 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Swagger - OpenAPI",
+        "description": "Dokumentasi ini berisi API - API yang berkenaan dengan Player.",
+        "version": "0.5.0",
+        "contact": {
+            "email": "nourafni24@gmail.com",
+            "name": "Nour Afni Putri",
+            "url": "https://github.com/Nourafniputri"
+        }
+    },
+    "externalDocs": 
+    {
+        "description": "Repository Github",
+        "url": "https://github.com/berbinarbinar/binar-challenge-chapter-8.git"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:4000"
+        }
+    ],
+    "tags": [
+        {
+            "name": "Player",
+            "description": "Everything about Player"
+        }
+    ],
+    "paths": {
+        "/api/v1/players": {
+           "get": {
+                "tags": [
+                    "Player"
+                ],
+                "summary": "Ambil data Player",
+                "description": "API ini digunakan untuk Mengambil data Player",
+                "responses": {
+                    "200": {
+                        "description": "Daftar Player",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "status": {
+                                            "type": "string"
+                                        },
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "type":"object",
+                                                "properties": {
+                                                    "id": {
+                                                        "type": "integer"
+                                                    },
+                                                    "username": {
+                                                        "type": "string"
+                                                    },
+                                                    "email": {
+                                                        "type": "string"
+                                                    },
+                                                    "password": {
+                                                        "type": "string"
+                                                    },
+                                                    "experience": {
+                                                        "type": "integer"
+                                                    },
+                                                    "lvl": {
+                                                        "type": "integer"
+                                                    },
+                                                    "createdAt": {
+                                                        "type": "string"
+                                                    },
+                                                    "updatedAt": {
+                                                        "type": "string"
+                                                    }
+                                                }
+                                            }
+                                        }   
+                                    }
+                                }
+                            }
+                        } 
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Player"
+                ],
+                "summary": "Menambah data Player",
+                "description": "API ini digunakan untuk Menambahkan data Player Baru",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "username": {
+                                        "type": "string"
+                                    },
+                                    "email": {
+                                        "type": "string"
+                                    },
+                                    "password": {
+                                        "type": "string"
+                                    },
+                                    "experience": {
+                                        "type": "integer"
+                                    },
+                                    "lvl": {
+                                        "type": "integer"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Daftar Player",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "status": {
+                                            "type": "string"
+                                        },
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "type":"object",
+                                                "properties": {
+                                                    "id": {
+                                                        "type": "integer"
+                                                    },
+                                                    "username": {
+                                                        "type": "string"
+                                                    },
+                                                    "email": {
+                                                        "type": "string"
+                                                    },
+                                                    "password": {
+                                                        "type": "string"
+                                                    },
+                                                    "experience": {
+                                                        "type": "integer"
+                                                    },
+                                                    "lvl": {
+                                                        "type": "integer"
+                                                    },
+                                                    "createdAt": {
+                                                        "type": "string"
+                                                    },
+                                                    "updatedAt": {
+                                                        "type": "string"
+                                                    }
+                                                }
+                                            }
+                                        }   
+                                    }
+                                }
+                            }
+                        } 
+                    }
+                }
+            }       
+        },
+        "/api/v1/players/1": {
+            "get": {
+                "tags": [
+                    "Player"
+                ],
+                "summary": "Ambil data Player Id 1",
+                "description": "API ini digunakan untuk Mengambil data Player dengan Id 1",
+                "responses": {
+                    "200": {
+                        "description": "Daftar Player",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "status": {
+                                            "type": "string"
+                                        },
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "type":"object",
+                                                "properties": {
+                                                    "id": {
+                                                        "type": "integer"
+                                                    },
+                                                    "username": {
+                                                        "type": "string"
+                                                    },
+                                                    "email": {
+                                                        "type": "string"
+                                                    },
+                                                    "password": {
+                                                        "type": "string"
+                                                    },
+                                                    "experience": {
+                                                        "type": "integer"
+                                                    },
+                                                    "lvl": {
+                                                        "type": "integer"
+                                                    },
+                                                    "createdAt": {
+                                                        "type": "string"
+                                                    },
+                                                    "updatedAt": {
+                                                        "type": "string"
+                                                    }
+                                                }    
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Player with Id: 1 not found!"
+                    }
+                }
+            }
+        },
+        "/api/v1/players/2": {
+            "put": {
+                "tags": [
+                    "Player"
+                ],
+                "summary": "Update data Player Id 2",
+                "description": "API ini digunakan untuk Memperbarui data Player dengan Id 2",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "username": {
+                                        "type": "string",
+                                        "example": "HardcoreLevellingWarrior"
+                                    },
+                                    "email": {
+                                        "type": "string",
+                                        "example": "hclw@gmail.com"
+                                    },
+                                    "password": {
+                                        "type": "string",
+                                        "example": "$2b$10$npOiZ3YRbtfUS7qFOYoh5esrvmgoeDOB7hx0zujfKYvKCjVX8BB/u"
+                                    },
+                                    "experience": {
+                                        "type": "integer",
+                                        "example": 600000
+                                    },
+                                    "lvl": {
+                                        "type": "integer",
+                                        "example": 666
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Daftar Player",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "status": {
+                                            "type": "string"
+                                        },
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "type":"object",
+                                                "properties": {
+                                                    "id": {
+                                                        "type": "integer"
+                                                    },
+                                                    "username": {
+                                                        "type": "string"
+                                                    },
+                                                    "email": {
+                                                        "type": "string"
+                                                    },
+                                                    "password": {
+                                                        "type": "string"
+                                                    },
+                                                    "experience": {
+                                                        "type": "integer"
+                                                    },
+                                                    "lvl": {
+                                                        "type": "integer"
+                                                    },
+                                                    "createdAt": {
+                                                        "type": "string"
+                                                    },
+                                                    "updatedAt": {
+                                                        "type": "string"
+                                                    }
+                                                }    
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Failed to update !"
+                    }
+                }
+            }
+        },
+        "/api/v1/players/3": {
+            "delete": {
+                "tags": [
+                    "Player"
+                ],
+                "summary": "Hapus data Player Id 3",
+                "description": "API ini digunakan untuk Menghapus data Player dengan Id 3",
+                "parameters": [
+                    {
+                        "name": "DeleteId",
+                        "description": "Tuliskan Id Player untuk menghapus data",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Player with Id: 3, was deleted successfully"
+                    },
+                    "400": {
+                        "description": "Cannot delete Player with id: 3. Maybe Player was not found!"
+                    }
+                }
+            }
+        },
+        "/api/v1/players/exp/1": {
+            "post": {
+                "tags": [
+                    "Player"
+                ],
+                "summary": "Menambah Experience Id 1",
+                "description": "API ini digunakan untuk Menambahkan data Experience Player Id 1",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "username": {
+                                        "type": "string",
+                                        "example": "PussySlayer613"
+                                    },
+                                    "email": {
+                                        "type": "string",
+                                        "example": "pussy.slay3r@gmail.com"
+                                    },
+                                    "password": {
+                                        "type": "string",
+                                        "example": "$2b$10$XQH05f9Kz0PIlKo9bCiSL.7Kdkxg.k04/r46DCPlWwAUx4Ay7Wcr6"
+                                    },
+                                    "experience": {
+                                        "type": "integer",
+                                        "example": 600000
+                                    },
+                                    "lvl": {
+                                        "type": "integer",
+                                        "example": 600
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Player with id: 1 gain 10000 experience. Total experience = 610000"
+                    },
+                    "400": {
+                        "description": "Cannot update Player with id:1"
+                    }
+                }
+            }  
+        }   
+    }
+}  
+    
